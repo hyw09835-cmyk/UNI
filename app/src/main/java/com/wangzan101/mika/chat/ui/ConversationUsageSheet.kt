@@ -81,7 +81,7 @@ internal fun ConversationUsageSheet(id: String?, onDismiss: () -> Unit) {
 @Composable
 private fun UsageDetails(usage: ConversationUsage) {
     val c = MikaTheme.colors
-    val total = "${UsageCopy.compactTokens(usage.input + usage.output)} ${UsageCopy.UNIT}"
+    val total = "${UsageCopy.compactTokens(usage.input + usage.output)} ${UsageCopy.MikaT}"
     Text(stringResource(if (usage.partial) R.string.chat_conversation_tokens_partial else R.string.chat_conversation_tokens, total),
         Modifier.padding(top = 16.dp), style = MikaType.BodyStrong, color = c.ink)
     CountRow(stringResource(R.string.metrics_input_tokens), UsageCopy.compactTokens(usage.input))

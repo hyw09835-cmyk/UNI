@@ -384,7 +384,7 @@ internal class DeskChatOps(
     }
 
     /**
-     * 记下用户这句里他自己说的话([UserWords.saidToDesk]):引的 Mika 的回答、屏幕和页面的说明、附件行都不记,
+     * 记下用户这句里他自己说的话([UserWords.saidToDesk]):引的 UNI 的回答、屏幕和页面的说明、附件行都不记,
      * 前台拿它们派单核对不过。返回记下的那份(可能为空)。
      */
     private fun remember(text: String): String =

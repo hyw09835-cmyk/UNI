@@ -251,7 +251,7 @@ private fun ResultSummaryCard(h: TimelineHeader, stepCount: Int) {
         Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp)) {
             SummaryStat(stringResource(R.string.timeline_duration), h.duration ?: "—")
             SummaryStat(stringResource(R.string.metrics_steps), stepCount.toString())
-            SummaryStat(UsageCopy.UNIT, UsageCopy.tokens(h.tokensUsed))
+            SummaryStat(UsageCopy.MikaT, UsageCopy.tokens(h.tokensUsed))
         }
     }
 }

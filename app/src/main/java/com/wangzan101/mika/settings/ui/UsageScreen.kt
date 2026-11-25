@@ -139,7 +139,7 @@ object UsageCopy {
     val OTHERS: String get() = tr(R.string.usage_others)
     val DELETED: String get() = tr(R.string.usage_deleted)
     val CHANGE_DATES: String get() = tr(R.string.usage_change_dates)
-    const val UNIT = "Token"
+    const val MikaT = "Token"
 
     /** 图表里有自己颜色的服务商最多几家(主题里 [MikaColors.series] 的个数),其余在趋势图里归为「其他」。 */
     const val COLORED = 3
@@ -411,7 +411,7 @@ private fun TotalsCard(t: UsageTotals) {
             Row(Modifier.padding(top = 2.dp), verticalAlignment = Alignment.Bottom) {
                 Text(UsageCopy.tokens(t.tokens), Modifier.testTag("usage-total"), style = TotalStyle, color = c.ink)
                 Text(
-                    UsageCopy.UNIT, Modifier.padding(start = 4.dp, bottom = 6.dp),
+                    UsageCopy.MikaT, Modifier.padding(start = 4.dp, bottom = 6.dp),
                     style = MikaType.Value, fontWeight = FontWeight.Medium, color = c.ink2,
                 )
             }

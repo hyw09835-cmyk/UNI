@@ -58,7 +58,7 @@ class ProviderStore(
     internal val dailyUsage: (String) -> Long = { 0L },
     internal val newId: () -> String = { UUID.randomUUID().toString() },
     /** 发给模型服务的 User-Agent;App 给 `Mika/<版本>`。 */
-    internal val userAgent: String = "Mika",
+    internal val userAgent: String = "UNI",
     /** 列模型:接口类型、地址、Key、每个请求都带的头。 */
     internal val modelLister: suspend (ProviderConfig.Kind, String, String?, Map<String, String>) -> ModelListResult = ::listAvailable,
     /** 「用 ChatGPT 登录」的授权服务(换令牌、刷新、注销)。 */

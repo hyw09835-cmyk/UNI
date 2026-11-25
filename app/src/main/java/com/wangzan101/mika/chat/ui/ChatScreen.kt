@@ -135,7 +135,7 @@ fun ChatScreen(
     voice: VoiceSource? = null,
     /** 「还不能语音输入」里的「去选」。 */
     openSpeechModel: () -> Unit = {},
-    /** 输入框里还没发出的字，交给「教 Mika」预填，不会自己开始。 */
+    /** 输入框里还没发出的字，交给「教 UNI」预填，不会自己开始。 */
     onOpenTeach: (String) -> Unit = {},
     /** 首页推荐任务。不传时用本机保存的那一份;测试传入单独的存储,避免改到用户的数据。 */
     recommendations: RecommendedTaskStore? = null,
@@ -695,7 +695,7 @@ fun ChatScreen(
             },
             onReopen = { if (deskPip != null) deskPipClosed = deskPipClosed - deskPip.taskId else vm.reopenPip() },
             onToggleSound = { if (deskPip != null) vm.togglePipSoundIn(deskPip.taskId) else vm.togglePipSound() },
-            // 要你处理时点小窗:收起,滚到要你处理的那张卡片。Mika 在办的事滚到它的问题卡(没有就打开它的过程记录);
+            // 要你处理时点小窗:收起,滚到要你处理的那张卡片。UNI 在办的事滚到它的问题卡(没有就打开它的过程记录);
             // 自己的任务的卡片在最后一问一答里,它后面只可能还有文件卡片和去设置那一行
             onAttention = {
                 if (deskPip != null) {

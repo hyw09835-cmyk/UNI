@@ -288,7 +288,7 @@ internal fun TextLink(text: String, onClick: () -> Unit) {
     Text(text, Modifier.clip(MikaShapes.Pill).clickable(onClick = onClick).padding(4.dp), style = MikaType.Caption, color = MikaTheme.colors.ink3)
 }
 
-/** 导出到「下载/Mika」的文件:小卡片,名字、大小和存放处;点了能看的在 App 里打开([FileViewer]),其余交给系统里能打开它的 App。 */
+/** 导出到「下载/UNI」的文件:小卡片,名字、大小和存放处;点了能看的在 App 里打开([FileViewer]),其余交给系统里能打开它的 App。 */
 @Composable
 internal fun FileCards(files: List<SharedFile>) {
     val context = LocalContext.current

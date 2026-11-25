@@ -70,7 +70,7 @@ class DeskPromptTest {
 
     @Test fun theDefaultPersonaAddsNothing() {
         val prompt = DeskPrompt.user(spoken = false)
-        assertTrue(prompt.startsWith("You are Mika"))
+        assertTrue(prompt.startsWith("You are UNI"))
         assertFalse(prompt.contains("The user has given you the name"))
         assertFalse(prompt.contains("<persona"))
         assertEquals(prompt, DeskPrompt.user(spoken = false, persona = DeskPersona()))

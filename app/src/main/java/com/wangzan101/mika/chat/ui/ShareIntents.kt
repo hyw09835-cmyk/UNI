@@ -133,7 +133,7 @@ internal fun readShare(intent: Intent): ShareContent? {
     }
 }
 
-/** 检查分享方的读取权，避免用 Mika 的相册或文件夹权限代读任意 URI。 */
+/** 检查分享方的读取权，避免用 UNI 的相册或文件夹权限代读任意 URI。 */
 internal fun Activity.shareCanRead(intent: Intent, uri: Uri, clipUris: Set<Uri>): Boolean {
     if (uri.scheme != "content") return false
     val read = Intent.FLAG_GRANT_READ_URI_PERMISSION
@@ -141,7 +141,7 @@ internal fun Activity.shareCanRead(intent: Intent, uri: Uri, clipUris: Set<Uri>)
         if (Build.VERSION.SDK_INT >= 35) {
             caller?.let { return@runCatching it.checkContentUriPermission(uri, read) == PackageManager.PERMISSION_GRANTED }
         }
-        // 旧系统无法查询启动方，只接受带有读取标志、并且 Mika 确实有 URI 授权的内容。
+        // 旧系统无法查询启动方，只接受带有读取标志、并且 UNI 确实有 URI 授权的内容。
         (intent.flags and read) != 0 && (uri in clipUris || intent.data == uri) &&
             checkUriPermission(uri, Process.myPid(), Process.myUid(), read) == PackageManager.PERMISSION_GRANTED
     }.getOrDefault(false)

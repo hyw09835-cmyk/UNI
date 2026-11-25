@@ -446,7 +446,7 @@ class ChatViewModel(
     /** 停下前台派出的一件。 */
     fun cancelDeskTask(taskId: String) { desking?.cancel(taskId) }
 
-    /** 正在办的一件事([taskId] 即它跑的那个对话)要你动手时,问题卡上的按钮:只作用于这一件;停止照样经由 Mika。 */
+    /** 正在办的一件事([taskId] 即它跑的那个对话)要你动手时,问题卡上的按钮:只作用于这一件;停止照样经由 UNI。 */
     internal fun deskNeedOps(taskId: String) = NeedOps(
         cancel = { cancelDeskTask(taskId) }, resume = { actions.resumeIn(taskId) }, takeOver = { actions.takeOverIn(taskId) },
         handBack = { actions.handBackIn(taskId) }, finishedMyself = { actions.finishedMyselfIn(taskId) }, skip = { actions.skipIn(taskId) },

@@ -220,10 +220,10 @@ class PersonaPromptTest {
 
     /** 称呼是默认的 Mika 时身份和人格层逐字节不变;改了以后身份句和固定头用新名字,并多一段「Mika 是 App 的名字」。 */
     @Test fun nicknameReplacesTheNameInTheFixedTextAndExplainsTheAppName() {
-        assertEquals(SystemPrompt.identity(), SystemPrompt.identity("Mika"))
-        assertEquals(PersonaPrompt.layer("P", "短一点。"), PersonaPrompt.layer("P", "短一点。", assistant = "Mika"))
+        assertEquals(SystemPrompt.identity(), SystemPrompt.identity("UNI"))
+        assertEquals(PersonaPrompt.layer("P", "短一点。"), PersonaPrompt.layer("P", "短一点。", assistant = "UNI"))
         assertFalse(SystemPrompt.identity().contains("{{"))
-        assertFalse(SystemPrompt.identity().contains("Mika is the name of the app"))
+        assertFalse(SystemPrompt.identity().contains("UNI is the name of the app"))
 
         val renamed = SystemPrompt.identity("Kaguya")
         assertTrue(renamed.startsWith("You are Kaguya, the user's personal assistant on their phone."))

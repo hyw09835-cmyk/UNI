@@ -28,7 +28,7 @@ internal object CallSummaryGenerator {
             // 没能转告的主人回复也不是通话里说过的话
             if (line.role == "system" || line.role == CallTranscriptLine.OWNER_UNRELAYED) return@mapNotNull null
             val text = line.text.trim().takeIf(String::isNotBlank) ?: return@mapNotNull null
-            "${if (line.role == "assistant") "Mika" else otherParty}: $text"
+            "${if (line.role == "assistant") "UNI" else otherParty}: $text"
         }.joinToString("\n").takeLast(MAX_INPUT_CHARS)
         if (input.isBlank()) return null
         val message = Message(Role.User, listOf(Part.Text(input)), Author.User)

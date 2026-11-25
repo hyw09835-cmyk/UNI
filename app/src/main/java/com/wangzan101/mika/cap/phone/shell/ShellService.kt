@@ -943,7 +943,7 @@ class ShellService(
         const val CLIP_SET = 0
         const val CLIP_UNREADABLE = 1
         const val CLIP_FAILED = 2
-        internal const val CLIP_LABEL = "Mika"
+        internal const val CLIP_LABEL = "UNI"
         // AppOpsManager 里这个名字是隐藏的
         internal const val OPSTR_READ_CLIPBOARD = "android:read_clipboard"
         internal const val READ_CLIPBOARD_IN_BACKGROUND = "android.permission.READ_CLIPBOARD_IN_BACKGROUND"

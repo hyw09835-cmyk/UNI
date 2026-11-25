@@ -15,14 +15,14 @@
     <string name="call_mode_speak">話す</string>
     <string name="call_mode_think_light">軽量モデル</string>
     <string name="call_mode_think_main">メインモデル</string>
-    <string name="call_mode_think_note">Mika が返事に使うモデル（チャットと通話）</string>
+    <string name="call_mode_think_note">UNI が返事に使うモデル（チャットと通話）</string>
     <string name="call_mode_think_light_note">返答が速い。軽量モデル未設定ならメインモデル</string>
     <string name="call_mode_listen_device">端末の音声認識は通話音声を聞けません。「聞く」にサービスのモデルを選んでください。</string>
     <string name="call_mode_rhythm">会話のテンポ</string>
     <string name="call_mode_silence">話し終わりの判定</string>
     <string name="call_mode_silence_sub">%1$s 秒無音で話し終わりとみなす</string>
     <string name="call_mode_barge">相手が話したら止める</string>
-    <string name="call_mode_barge_sub">Mika が話している間に相手が話すと、止まって聞きます</string>
+    <string name="call_mode_barge_sub">UNI が話している間に相手が話すと、止まって聞きます</string>
     <string name="call_mode_realtime_model">リアルタイムモデル</string>
     <string name="call_mode_realtime_note">リアルタイムでは、このモデル 1 つが聞く・考える・話すを担います。</string>
     <string name="voice_vendors_lead">サービスごとにキーを一度入れると、その認識・合成・リアルタイムモデルがすべて選べます。</string>
@@ -61,7 +61,7 @@
     <string name="call_mode_idle_custom">カスタム</string>
     <string name="call_mode_idle_custom_sub">%1$d 分間静かなら切る</string>
     <string name="call_mode_idle_never">自動で切らない</string>
-    <string name="call_mode_idle_note">通話で新しい動きがこの時間ないと自動で切ります（誰も話さず、入力もなく、タスクも進まない）。切る 30 秒前に Mika がまだいるか尋ねます。</string>
+    <string name="call_mode_idle_note">通話で新しい動きがこの時間ないと自動で切ります（誰も話さず、入力もなく、タスクも進まない）。切る 30 秒前に UNI がまだいるか尋ねます。</string>
     <string name="call_mode_idle_dialog_title">切るまでの時間</string>
     <string name="call_mode_idle_dialog_hint">1〜120 分</string>
 </resources>

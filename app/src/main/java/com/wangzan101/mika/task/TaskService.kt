@@ -336,7 +336,7 @@ class TaskService : Service() {
                     .apply { if (scheduled) applyScheduledQuietHours(context) }
                     .build())
                 is Delivery.Notice -> nm.notify(nextResultId(), Notification.Builder(context, CHANNEL_RESULT)
-                    .setSmallIcon(R.drawable.ic_notification).setContentTitle("Mika")
+                    .setSmallIcon(R.drawable.ic_notification).setContentTitle("UNI")
                     .setContentText(delivery.text).setContentIntent(openApp(context, delivery.threadId)).setAutoCancel(true)
                     .apply { if (scheduled) applyScheduledQuietHours(context) }
                     .build())
@@ -600,7 +600,7 @@ class TaskService : Service() {
 
         /** 通知的标题和正文;[appLabel] 把包名换成 App 名。 */
         internal fun describe(state: TaskState, appLabel: (String) -> String = { it }): Pair<String, String> = when (state) {
-            TaskState.Idle -> "Mika" to ""
+            TaskState.Idle -> "UNI" to ""
             is TaskState.Running -> tr(R.string.task_running) to (state.progress?.let(StatusCopy::progress) ?: when {
                 state.step == 0 -> state.note
                 else -> tr(R.string.task_step_note, state.step, state.note).trimEnd(':', ' ')

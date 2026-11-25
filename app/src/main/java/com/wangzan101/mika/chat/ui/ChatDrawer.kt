@@ -82,7 +82,7 @@ fun ChatDrawer(
     onSettings: () -> Unit,
     onOpen: (DrawerConversation) -> Unit,
     onAbout: () -> Unit = {},
-    /** 有新版本:「关于 Mika」带小红点。 */
+    /** 有新版本:「关于 UNI」带小红点。 */
     aboutDot: Boolean = false,
     /** 长按一条存过的对话:在它原地弹出操作菜单(置顶、改名、删除);带上那一行在窗口里的位置和大小。 */
     onActions: (DrawerConversation, Rect) -> Unit = { _, _ -> },
@@ -142,7 +142,7 @@ fun ChatDrawer(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             MikaLogo(32.dp, corner = 9.dp)
-            Text("Mika", Modifier.weight(1f), style = MikaType.Title.copy(fontWeight = WordmarkWeight), color = c.ink)
+            Text("UNI", Modifier.weight(1f), style = MikaType.Title.copy(fontWeight = WordmarkWeight), color = c.ink)
             // 新对话放在标题右边;搜索、多选、归档时收起
             if (!searchActive && !selecting && !archivedView) NewConversationButton(canSwitch, onNew)
             // 多选从长按菜单进;进去以后这里换成「取消」,返回键同样能退出
@@ -297,7 +297,7 @@ fun ChatDrawer(
         if (selecting) {
             SelectBar(selectedCount, allSelected, onSelectAll, archivedView, onArchiveSelected, onUnarchiveSelected, onDeleteSelected)
         } else {
-            // 设置固定在侧栏最底下靠左;有新版时右边才出现「更新」带红点,点它进「关于 Mika」
+            // 设置固定在侧栏最底下靠左;有新版时右边才出现「更新」带红点,点它进「关于 UNI」
             Row(
                 Modifier.fillMaxWidth()
                     .padding(horizontal = 12.dp, vertical = 6.dp).testTag("drawer-footer"),

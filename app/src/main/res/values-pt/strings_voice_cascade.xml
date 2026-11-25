@@ -15,14 +15,14 @@
     <string name="call_mode_speak">Falar</string>
     <string name="call_mode_think_light">Modelo leve</string>
     <string name="call_mode_think_main">Modelo principal</string>
-    <string name="call_mode_think_note">O modelo com que o Mika responde (conversas e chamadas)</string>
+    <string name="call_mode_think_note">O modelo com que o UNI responde (conversas e chamadas)</string>
     <string name="call_mode_think_light_note">Responde mais rápido; usa o principal se não houver modelo leve</string>
     <string name="call_mode_listen_device">O reconhecimento do aparelho não ouve o áudio da chamada. Escolha um modelo de serviço para ouvir.</string>
     <string name="call_mode_rhythm">Turnos de fala</string>
     <string name="call_mode_silence">Quando terminou de falar</string>
     <string name="call_mode_silence_sub">%1$s s de silêncio encerram a vez</string>
     <string name="call_mode_barge">Parar quando falar</string>
-    <string name="call_mode_barge_sub">Se falar enquanto Mika fala, Mika para e ouve</string>
+    <string name="call_mode_barge_sub">Se falar enquanto UNI fala, UNI para e ouve</string>
     <string name="call_mode_realtime_model">Modelo em tempo real</string>
     <string name="call_mode_realtime_note">Em tempo real, este modelo ouve, pensa e fala.</string>
     <string name="voice_vendors_lead">Informe a chave uma vez por serviço e todos os modelos de ouvir, falar e tempo real ficam disponíveis.</string>
@@ -54,14 +54,14 @@
     <string name="calls_voice_own_settings_sub">Por exemplo, reconhecimento telefônico de 8 kHz ou uma voz mais calma</string>
     <string name="calls_voice_device_warn">O reconhecimento do aparelho não ouve a outra pessoa. Escolha um modelo de reconhecimento online para chamadas.</string>
     <string name="calls_voice_for_calls">Só para chamadas</string>
-    <string name="voicecall_standard_title">Escolha como Mika ouve e fala</string>
+    <string name="voicecall_standard_title">Escolha como UNI ouve e fala</string>
     <string name="voicecall_standard_body">As chamadas de voz ouvem → pensam → falam: um modelo de reconhecimento ouve você, seu modelo de chat responde e um modelo de voz lê em voz alta.</string>
     <string name="call_mode_idle">Desligar automaticamente</string>
     <string name="call_mode_idle_minutes">%1$d min</string>
     <string name="call_mode_idle_custom">Personalizado</string>
     <string name="call_mode_idle_custom_sub">Após %1$d min de silêncio</string>
     <string name="call_mode_idle_never">Nunca</string>
-    <string name="call_mode_idle_note">Desliga quando nada novo acontece na chamada por esse tempo: ninguém fala nem digita e nenhuma tarefa avança. A Mika pergunta se você ainda está aí 30 segundos antes.</string>
+    <string name="call_mode_idle_note">Desliga quando nada novo acontece na chamada por esse tempo: ninguém fala nem digita e nenhuma tarefa avança. A UNI pergunta se você ainda está aí 30 segundos antes.</string>
     <string name="call_mode_idle_dialog_title">Desligar após</string>
     <string name="call_mode_idle_dialog_hint">De 1 a 120 minutos</string>
 </resources>

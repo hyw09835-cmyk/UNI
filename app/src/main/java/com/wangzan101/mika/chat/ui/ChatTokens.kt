@@ -12,7 +12,7 @@ import com.wangzan101.mika.settings.ui.UsageCopy
 /** 对话页上的 token 用量:每轮结束那一行显示这一轮的用量。 */
 object ChatTokensCopy {
     /** 「1.2 万 Token」,写法和 Token 用量页同一个。 */
-    fun amount(n: Long): String = "${UsageCopy.tokens(n)} ${UsageCopy.UNIT}"
+    fun amount(n: Long): String = "${UsageCopy.tokens(n)} ${UsageCopy.MikaT}"
 
     fun cost(estimate: DeepSeekCost): String {
         val min = estimate.minCny?.toBigDecimalOrNull() ?: return tr(R.string.chat_task_cost_unavailable)

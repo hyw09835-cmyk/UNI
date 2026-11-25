@@ -34,10 +34,10 @@
     <string name="teach_accept">پذیرفتن این مهارت</string>
     <string name="teach_retry">دوباره مرتب کن</string>
     <string name="teach_intro_title">یک بار یادم بده</string>
-    <string name="teach_intro_body">یک بار انجامش بده، Mika نگاه می‌کند و یاد می‌گیرد</string>
+    <string name="teach_intro_body">یک بار انجامش بده، UNI نگاه می‌کند و یاد می‌گیرد</string>
     <string name="teach_disclosure_short">فقط کارهایی که روی این گوشی انجام می‌شود دیده می‌شود. رمز عبور، کد تأیید و اطلاعات پرداخت ثبت نمی‌شود.</string>
     <string name="teach_summary_ready">آماده شد</string>
-    <string name="teach_summary_head">به روش خود Mika نوشته شده، نه پخش دوبارهٔ کارهای تو.</string>
+    <string name="teach_summary_head">به روش خود UNI نوشته شده، نه پخش دوبارهٔ کارهای تو.</string>
     <string name="teach_folded_n">%1$d مرحلهٔ فقط دستی حذف شد</string>
     <string name="teach_basic_note">این بار مدلی وصل نبود، پس با قواعد خود دستگاه مرتب شد. با تنظیم مدل دقیق‌تر درک می‌شود.</string>
     <string name="teach_accepted_title">یاد گرفتم</string>
@@ -51,6 +51,6 @@
     <string name="teach_step2">یک بار مثل همیشه انجامش بده</string>
     <string name="teach_step2_note">بالای صفحه «در حال یادگیری» می‌آید؛ هر وقت خواستی مکث کن یا تمام کن</string>
     <string name="teach_step3">تأیید کن</string>
-    <string name="teach_step3_note">Mika مهارت را نشان می‌دهد؛ فقط بعد از تأیید استفاده می‌شود</string>
+    <string name="teach_step3_note">UNI مهارت را نشان می‌دهد؛ فقط بعد از تأیید استفاده می‌شود</string>
     <string name="teach_good_for">ارزش یاد دادن دارد: روش خودت، ورودی‌های پنهان، و کارهایی که هر بار چند ضربه می‌خواهند</string>
 </resources>

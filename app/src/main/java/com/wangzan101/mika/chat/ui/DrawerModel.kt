@@ -240,7 +240,7 @@ fun archivedAgo(at: Long, now: Long, zone: ZoneId = ZoneId.systemDefault()): Str
     else trPlural(R.plurals.drawer_archived_days_ago, days, days)
 }
 
-/** 侧栏顶上 Mika 名字下面那行状态,和它是不是好的(绿点)还是要处理(橙点)。 */
+/** 侧栏顶上 UNI 名字下面那行状态,和它是不是好的(绿点)还是要处理(橙点)。 */
 fun readiness(check: Prerequisites.Check): Pair<String, Boolean> = when {
     !check.canStartTask -> tr(R.string.chat_cannot_start) to false
     !check.phoneReady -> tr(R.string.drawer_phone_not_ready) to false

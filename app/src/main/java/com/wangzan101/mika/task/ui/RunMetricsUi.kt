@@ -82,7 +82,7 @@ object RunMetricsCopy {
     fun summaryLine(m: RunMetrics): String = listOfNotNull(
         tr(R.string.metrics_total, duration(m.totalMs)),
         trPlural(R.plurals.metrics_round_trips, m.modelCalls),
-        "${UsageCopy.tokens(m.tokens)} ${UsageCopy.UNIT}",
+        "${UsageCopy.tokens(m.tokens)} ${UsageCopy.MikaT}",
         m.firstFeedbackMs?.let { tr(R.string.metrics_first_feedback_at, duration(it)) },
     ).joinToString(" · ")
 

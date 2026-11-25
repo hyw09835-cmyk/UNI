@@ -112,7 +112,7 @@ internal fun TaskService.progressNotification(run: TaskRun, state: TaskState): N
 /** 忙着却还没有任务对象时(收尾被打断等)也得马上进前台。 */
 internal fun TaskService.preparingNotification(): Notification = Notification.Builder(this, CHANNEL_PROGRESS)
     .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("Mika")
+    .setContentTitle("UNI")
     .setContentText(PREPARING)
     .setOngoing(true)
     .setOnlyAlertOnce(true)

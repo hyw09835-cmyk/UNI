@@ -197,7 +197,7 @@
     <string name="chat_copy">کپی</string>
     <string name="share_card_question">پرسش</string>
     <string name="share_card_answer">پاسخ</string>
-    <string name="share_card_made_by">توسط Mika انجام شد</string>
+    <string name="share_card_made_by">توسط UNI انجام شد</string>
     <string name="chat_quote">نقل‌قول</string>
     <string name="chat_select_text">انتخاب متن</string>
     <string name="chat_copied">کپی شد</string>
@@ -317,11 +317,11 @@
     <string name="plus_sub_device">پوشه‌های این گوشی را بگرد</string>
     <string name="plus_clipboard">تخته‌شمار</string>
     <string name="plus_sub_clipboard">آنچه تازه کپی کردی را بچسبان</string>
-    <string name="plus_sub_teach">یک بار نشان بده تا Mika یاد بگیرد</string>
+    <string name="plus_sub_teach">یک بار نشان بده تا UNI یاد بگیرد</string>
     <string name="plus_sub_skills">یک مهارت برای این نوبت انتخاب کن</string>
     <string name="plus_sub_tasks">کار ذخیره‌شده را در کادر ورودی پر کن</string>
     <string name="plus_sub_browser">مرورگر داخلی</string>
-    <string name="plus_skills_empty">هنوز مهارت شخصی نداری. مهارت‌هایی که Mika از کارهای انجام‌شده یاد می‌گیرد اینجا نمایش داده می‌شوند.</string>
+    <string name="plus_skills_empty">هنوز مهارت شخصی نداری. مهارت‌هایی که UNI از کارهای انجام‌شده یاد می‌گیرد اینجا نمایش داده می‌شوند.</string>
     <string name="plus_clipboard_empty">متنی برای چسباندن از تخته‌شمار نیست</string>
     <string name="plus_skill_directive">از مهارت «%1$s» استفاده کن: </string>
     <string name="plus_reuse">ذخیره‌شده‌ها</string>
@@ -339,10 +339,10 @@
     <string name="chat_idea_screenshot">آخرین اسکرین‌شاتم را پیدا کن</string>
     <string name="chat_idea_meeting">فردا ساعت ۳ بعدازظهر یک جلسه اضافه کن</string>
     <!-- 空对话推广卡上的一句话说明;完整提示词点了才填进输入框 -->
-    <string name="chat_example_github_star_blurb">از پروژهٔ متن‌باز Mika حمایت کن</string>
+    <string name="chat_example_github_star_blurb">از پروژهٔ متن‌باز UNI حمایت کن</string>
     <string name="chat_example_follow_blurb">سازنده را دنبال کن و به گفت‌وگو بپیوند</string>
     <string name="chat_example_group_summary_blurb">خلاصهٔ پیام‌های خوانده‌نشدهٔ امروز در یک خط</string>
-    <string name="chat_example_share_title">Mika را با یک دوست به اشتراک بگذار</string>
+    <string name="chat_example_share_title">UNI را با یک دوست به اشتراک بگذار</string>
     <string name="chat_example_share_blurb">به کسی که لازمش دارد معرفی کن</string>
-    <string name="chat_example_share">لینک پروژه Mika https://github.com/wangzan101/mika را با یک دوست به اشتراک بگذار و بگو که می‌تواند گوشی را برایش کار کند.</string>
+    <string name="chat_example_share">لینک پروژه UNI https://github.com/wangzan101/mika را با یک دوست به اشتراک بگذار و بگو که می‌تواند گوشی را برایش کار کند.</string>
 </resources>

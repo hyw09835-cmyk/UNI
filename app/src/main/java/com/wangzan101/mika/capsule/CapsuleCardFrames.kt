@@ -160,7 +160,7 @@ internal fun Detail(
     val r = card.run
     val sub = listOfNotNull(CapsuleCards.status(r.kind), elapsed(r.startedAt)).joinToString(" · ")
     CardFrame(height, fixed = false) {
-        Header(ScreenCopy.plain(r.run.goal).ifBlank { "Mika" }, sub, actions, handle)
+        Header(ScreenCopy.plain(r.run.goal).ifBlank { "UNI" }, sub, actions, handle)
         val screen = preview?.takeIf { CapsuleCards.showsScreen(card.content) }
         // 步骤那段的高度上限 = 小画面的高;还没有画面时按主屏的宽高比算同样的高,画面来了不跳
         val config = LocalConfiguration.current

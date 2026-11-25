@@ -100,7 +100,7 @@ fun ChatWithDrawer(
     onScreens: () -> Unit = {},
     onSettings: () -> Unit,
     onAbout: () -> Unit = {},
-    /** 有新版本:侧栏「关于 Mika」带小红点。 */
+    /** 有新版本:侧栏「关于 UNI」带小红点。 */
     updateAvailable: Boolean = false,
     /** 从侧栏进去的页面刚退回来:当场打开侧栏,回到进去之前的样子。 */
     reopen: Boolean = false,
@@ -113,7 +113,7 @@ fun ChatWithDrawer(
     resetKey: Int = 0,
     content: @Composable (openDrawer: () -> Unit) -> Unit,
 ) {
-    // 聊天页用纯白底,Mika 的回答是靠阴影浮起的白气泡
+    // 聊天页用纯白底,UNI 的回答是靠阴影浮起的白气泡
     val chatColors = MikaTheme.colors.let { base -> androidx.compose.runtime.remember(base) { base.forChat() } }
     androidx.compose.runtime.CompositionLocalProvider(
         com.wangzan101.mika.ui.theme.LocalMikaColors provides chatColors,

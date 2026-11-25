@@ -103,7 +103,7 @@ internal fun LazyListScope.exchange(
     highlightKey: String? = null,
     /** 终态后的两个新运行入口:true 从摘要断点继续,false 按原目标重新开始。 */
     recover: (Boolean) -> Unit = {},
-    /** 前台回的话紧接在上一条前台回话下面(Mika 连发):左上角收小、和上一条靠近。 */
+    /** 前台回的话紧接在上一条前台回话下面(UNI 连发):左上角收小、和上一条靠近。 */
     joinedAbove: Boolean = false,
     /** 下一条前台回话紧接在这条下面。 */
     joinedBelow: Boolean = false,
@@ -266,7 +266,7 @@ private fun SteerStepPill(text: String) {
 }
 
 /**
- * Mika 的一段回答:长按弹出复制 / 引用 / 选择文字(见 [MessageArea]),复制、引用的是去掉 Markdown 符号的纯文字;
+ * UNI 的一段回答:长按弹出复制 / 引用 / 选择文字(见 [MessageArea]),复制、引用的是去掉 Markdown 符号的纯文字;
  * [modifier] 是回答的底,抬起的那张是同样的字放在白卡上。选择文字时选区的把手在单独的弹出窗口里,拖把手不会带出侧栏。
  */
 @Composable
@@ -286,7 +286,7 @@ internal fun AnswerArea(key: String, answer: String, modifier: Modifier, content
 internal val ReplyGap = 8.dp
 
 /**
- * Mika 回答的底:浅色下是浅灰实色,深色下是亮一级的实色;不叠透明、不加阴影。左下尾角。
+ * UNI 回答的底:浅色下是浅灰实色,深色下是亮一级的实色;不叠透明、不加阴影。左下尾角。
  * 短的贴着字宽,长的铺满;前台回话、汇报、旧式回答都用这一种。
  */
 @Composable
@@ -294,7 +294,7 @@ internal fun Modifier.answerSurface(joinedAbove: Boolean = false): Modifier =
     background(MikaTheme.colors.answer, if (joinedAbove) MikaShapes.AnswerBubbleJoined else MikaShapes.AnswerBubble)
         .padding(horizontal = 13.dp, vertical = 10.dp)
 
-/** Mika 连发时两条回话之间的距离。 */
+/** UNI 连发时两条回话之间的距离。 */
 internal val JoinedReplyGap = 3.dp
 
 /**

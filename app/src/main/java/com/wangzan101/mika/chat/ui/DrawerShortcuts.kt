@@ -28,7 +28,7 @@ import com.wangzan101.mika.ui.theme.MikaIcons
 import com.wangzan101.mika.ui.theme.MikaTheme
 import com.wangzan101.mika.ui.theme.MikaType
 
-/** 侧栏顶部的三项主要能力:浏览器、教 Mika、AI 电话,一排三块等宽。 */
+/** 侧栏顶部的三项主要能力:浏览器、教 UNI、AI 电话,一排三块等宽。 */
 @Composable
 internal fun DrawerShortcuts(onBrowser: () -> Unit, onTeach: () -> Unit, onCalls: () -> Unit, modifier: Modifier = Modifier) {
     Row(modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {

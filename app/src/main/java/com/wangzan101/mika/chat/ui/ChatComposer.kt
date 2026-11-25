@@ -279,7 +279,7 @@ internal fun Composer(
                                 Icon(MikaIcons.Mic, hint, Modifier.size(MikaSize.Icon), tint = c.ink)
                             }
                         }
-                        // 在干活时(任务在跑、Mika 在回话或派出的事在跑)没字就停止;写了字停止让位给发送,发出去的话交给 Mika
+                        // 在干活时(任务在跑、UNI 在回话或派出的事在跑)没字就停止;写了字停止让位给发送,发出去的话交给 UNI
                         if ((busy || working) && !canSend) {
                             Box(
                                 Modifier.size(MikaSize.IconButton).clip(CircleShape)

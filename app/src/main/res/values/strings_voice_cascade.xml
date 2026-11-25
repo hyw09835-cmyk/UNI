@@ -15,14 +15,14 @@
     <string name="call_mode_speak">Speak</string>
     <string name="call_mode_think_light">Light model</string>
     <string name="call_mode_think_main">Main model</string>
-    <string name="call_mode_think_note">The model Mika replies with (chat and calls)</string>
+    <string name="call_mode_think_note">The model UNI replies with (chat and calls)</string>
     <string name="call_mode_think_light_note">Replies sooner; uses the main model when no light model is set</string>
     <string name="call_mode_listen_device">Device recognition can\'t hear call audio. Pick a service model to listen.</string>
     <string name="call_mode_rhythm">Turn taking</string>
     <string name="call_mode_silence">When they\'re done</string>
     <string name="call_mode_silence_sub">%1$s s of silence ends their turn</string>
     <string name="call_mode_barge">Stop when they talk</string>
-    <string name="call_mode_barge_sub">If they speak while Mika talks, Mika stops and listens</string>
+    <string name="call_mode_barge_sub">If they speak while UNI talks, UNI stops and listens</string>
     <string name="call_mode_realtime_model">Realtime model</string>
     <string name="call_mode_realtime_note">In realtime mode this one model listens, thinks and speaks.</string>
     <string name="voice_vendors_lead">Enter a key once per service, and all its listen, speak and realtime models become available.</string>
@@ -54,14 +54,14 @@
     <string name="calls_voice_own_settings_sub">For example an 8 kHz phone recognition model or a calmer voice</string>
     <string name="calls_voice_device_warn">Device recognition can\'t hear the other side of a call. Choose an online recognition model for calls.</string>
     <string name="calls_voice_for_calls">Just for phone calls</string>
-    <string name="voicecall_standard_title">Choose how Mika listens and speaks</string>
+    <string name="voicecall_standard_title">Choose how UNI listens and speaks</string>
     <string name="voicecall_standard_body">Voice calls listen → think → speak: a service\'s recognition model hears you, your chat model answers, and a speech model reads the answer aloud.</string>
     <string name="call_mode_idle">Auto hang-up</string>
     <string name="call_mode_idle_minutes">%1$d min</string>
     <string name="call_mode_idle_custom">Custom</string>
     <string name="call_mode_idle_custom_sub">After %1$d min of quiet</string>
     <string name="call_mode_idle_never">Never</string>
-    <string name="call_mode_idle_note">Hangs up when nothing new happens in the call for this long: no one speaks or types and no task moves on. Mika asks if you\'re still there 30 seconds before.</string>
+    <string name="call_mode_idle_note">Hangs up when nothing new happens in the call for this long: no one speaks or types and no task moves on. UNI asks if you\'re still there 30 seconds before.</string>
     <string name="call_mode_idle_dialog_title">Hang up after</string>
     <string name="call_mode_idle_dialog_hint">1 to 120 minutes</string>
 </resources>

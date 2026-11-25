@@ -75,7 +75,7 @@ internal fun ChatCard(
     CardFrame(height) {
         if (r == null) IdleHeader(card, actions, handle)
         else Header(
-            ScreenCopy.plain(thread?.title ?: r.run.goal).ifBlank { "Mika" },
+            ScreenCopy.plain(thread?.title ?: r.run.goal).ifBlank { "UNI" },
             listOfNotNull(CapsuleCards.status(r.kind), elapsed(r.startedAt)).joinToString(" · "),
             actions, handle,
         )

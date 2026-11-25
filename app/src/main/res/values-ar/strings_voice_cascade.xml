@@ -15,14 +15,14 @@
     <string name="call_mode_speak">كلام</string>
     <string name="call_mode_think_light">النموذج الخفيف</string>
     <string name="call_mode_think_main">النموذج الرئيسي</string>
-    <string name="call_mode_think_note">النموذج الذي يرد به Mika (المحادثة والمكالمات)</string>
+    <string name="call_mode_think_note">النموذج الذي يرد به UNI (المحادثة والمكالمات)</string>
     <string name="call_mode_think_light_note">يرد أسرع؛ يستخدم الرئيسي إن لم يُضبط خفيف</string>
     <string name="call_mode_listen_device">التعرف المدمج في الهاتف لا يسمع صوت المكالمة. اختر نموذجًا من خدمة للاستماع.</string>
     <string name="call_mode_rhythm">تبادل الأدوار</string>
     <string name="call_mode_silence">متى انتهى من الكلام</string>
     <string name="call_mode_silence_sub">%1$s ث من الصمت تنهي دوره</string>
     <string name="call_mode_barge">التوقف عندما يتكلم</string>
-    <string name="call_mode_barge_sub">إذا تكلم أثناء حديث Mika، تتوقف Mika وتستمع</string>
+    <string name="call_mode_barge_sub">إذا تكلم أثناء حديث UNI، تتوقف UNI وتستمع</string>
     <string name="call_mode_realtime_model">النموذج الفوري</string>
     <string name="call_mode_realtime_note">في الوضع الفوري يستمع هذا النموذج ويفكر ويتكلم.</string>
     <string name="voice_vendors_lead">أدخل المفتاح مرة لكل خدمة فتصبح كل نماذج الاستماع والكلام والفوري فيها متاحة.</string>
@@ -54,14 +54,14 @@
     <string name="calls_voice_own_settings_sub">مثل نموذج تعرف هاتفي 8 كيلوهرتز أو صوت أهدأ</string>
     <string name="calls_voice_device_warn">التعرف المدمج لا يسمع الطرف الآخر. اختر نموذج تعرف عبر الإنترنت للمكالمات.</string>
     <string name="calls_voice_for_calls">للهاتف فقط</string>
-    <string name="voicecall_standard_title">اختر كيف تستمع Mika وتتكلم</string>
+    <string name="voicecall_standard_title">اختر كيف تستمع UNI وتتكلم</string>
     <string name="voicecall_standard_body">المكالمة الصوتية: استماع ← تفكير ← كلام. نموذج تعرف من خدمة يسمعك، ونموذج الدردشة يجيب، ونموذج النطق يقرأ الإجابة.</string>
     <string name="call_mode_idle">إنهاء تلقائي</string>
     <string name="call_mode_idle_minutes">%1$d دقيقة</string>
     <string name="call_mode_idle_custom">مخصص</string>
     <string name="call_mode_idle_custom_sub">بعد %1$d دقيقة من الهدوء</string>
     <string name="call_mode_idle_never">أبدًا</string>
-    <string name="call_mode_idle_note">تنتهي المكالمة إذا لم يحدث فيها شيء جديد طوال هذه المدة: لا أحد يتكلم أو يكتب ولا تتقدم أي مهمة. تسأل Mika إن كنت ما زلت هنا قبل 30 ثانية.</string>
+    <string name="call_mode_idle_note">تنتهي المكالمة إذا لم يحدث فيها شيء جديد طوال هذه المدة: لا أحد يتكلم أو يكتب ولا تتقدم أي مهمة. تسأل UNI إن كنت ما زلت هنا قبل 30 ثانية.</string>
     <string name="call_mode_idle_dialog_title">الإنهاء بعد</string>
     <string name="call_mode_idle_dialog_hint">من 1 إلى 120 دقيقة</string>
 </resources>

@@ -26,7 +26,7 @@ internal val EmptyLead = MikaType.Value
 internal val EmptyGreeting = MikaType.LargeTitle.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold, letterSpacing = (-0.3).sp)
 internal val BubbleText = MikaType.Body.copy(fontSize = 15.sp)
 /** 回答:正文字号,两端对齐(中文整段行尾整齐,最后一行除外)。 */
-/** Mika 回答的正文:左对齐(两端对齐会把字撑开)、行高约 1.55 倍(段内紧凑,段与段靠段距拉开)、字距略松。 */
+/** UNI 回答的正文:左对齐(两端对齐会把字撑开)、行高约 1.55 倍(段内紧凑,段与段靠段距拉开)、字距略松。 */
 internal val AnswerText = MikaType.Body.copy(fontSize = 15.sp, lineHeight = 23.5.sp, letterSpacing = 0.2.sp, textAlign = TextAlign.Start)
 internal val NowText = MikaType.Value
 internal val ClockText = MikaType.Hint.copy(fontFeatureSettings = "tnum")

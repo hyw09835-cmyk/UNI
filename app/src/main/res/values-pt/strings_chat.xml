@@ -7,7 +7,7 @@
     <string name="chat_greeting_afternoon">Boa tarde</string>
     <string name="chat_greeting_evening">Boa noite</string>
     <string name="chat_greeting_night">Já é madrugada</string>
-    <string name="chat_empty_prompt">O que o Mika deve fazer?</string>
+    <string name="chat_empty_prompt">O que o UNI deve fazer?</string>
     <string name="chat_example_github_star">Abra https://github.com/wangzan101/mika e dê uma estrela ao projeto.</string>
     <string name="chat_example_follow">Abra o X, pesquise Wang Zan (@wangzan101) e siga a conta.</string>
     <string name="chat_example_group_summary">Abra o WhatsApp e resuma as mensagens não lidas de hoje, destacando tudo o que precisa da minha resposta.</string>
@@ -55,7 +55,7 @@
     </plurals>
     <string name="chat_background_note">Rodando em segundo plano — continue usando o celular. Toque na miniatura para ampliar.</string>
     <string name="chat_placeholder_busy">Adicione ou altere detalhes…</string>
-    <string name="chat_placeholder_answer">Responda à pergunta do Mika</string>
+    <string name="chat_placeholder_answer">Responda à pergunta do UNI</string>
     <string name="chat_placeholder_more">Diga mais alguma coisa…</string>
     <string name="chat_cannot_start">Ainda não é possível iniciar tarefas</string>
     <string name="chat_missing">Falta: %1$s</string>
@@ -66,7 +66,7 @@
     <string name="chat_expand_steps">Mostrar passos</string>
     <string name="chat_collapse_steps">Ocultar passos</string>
     <string name="chat_view_process">Ver como foi</string>
-    <string name="chat_unlock_body">Seu celular está bloqueado. O Mika continuará quando você o desbloquear.</string>
+    <string name="chat_unlock_body">Seu celular está bloqueado. O UNI continuará quando você o desbloquear.</string>
     <string name="chat_input_body">%1$s\nToque em uma opção ou digite abaixo. %2$s</string>
     <string name="chat_refuse">Recusar</string>
     <string name="chat_allow_once">Permitir só desta vez</string>
@@ -203,11 +203,11 @@
     <string name="attach_album">Fotos</string>
     <string name="attach_files">Arquivos</string>
     <string name="attach_recent">Fotos recentes</string>
-    <string name="attach_recent_partial">Fotos que você permitiu o Mika acessar</string>
+    <string name="attach_recent_partial">Fotos que você permitiu o UNI acessar</string>
     <string name="attach_all">Todas as fotos</string>
     <string name="attach_change">Alterar acesso</string>
     <string name="attach_no_photos">Ainda não há fotos</string>
-    <string name="attach_need_access">Para escolher fotos aqui, permita que o Mika acesse suas fotos</string>
+    <string name="attach_need_access">Para escolher fotos aqui, permita que o UNI acesse suas fotos</string>
     <string name="attach_grant">Permitir acesso às fotos</string>
     <string name="attach_grant_hint">Você também pode tocar em “Fotos” acima para usar o seletor de fotos do sistema</string>
     <string name="attach_full">No máximo %1$d anexos por vez</string>
@@ -229,10 +229,10 @@
     <string name="attach_file_and_more">%1$s e mais %2$d arquivos</string>
     <string name="screen_tag">Sua tela agora</string>
     <string name="screen_blocked">Não foi possível capturar: esta página não permite capturas de tela</string>
-    <string name="screen_camera">Capturar esta tela para o Mika</string>
+    <string name="screen_camera">Capturar esta tela para o UNI</string>
     <string name="screen_remove">Remover esta captura de tela</string>
-    <string name="screen_send">Enviar sua tela atual para o Mika</string>
-    <string name="pip_screen">Tela virtual do Mika</string>
+    <string name="screen_send">Enviar sua tela atual para o UNI</string>
+    <string name="pip_screen">Tela virtual do UNI</string>
     <string name="collapse">Recolher</string>
     <string name="no_app_for_link">Nenhum app consegue abrir este link</string>
     <string name="source_none">Nenhuma origem foi salva para esta resposta</string>
@@ -242,7 +242,7 @@
     <string name="chat_copy">Copiar</string>
     <string name="share_card_question">Pergunta</string>
     <string name="share_card_answer">Resposta</string>
-    <string name="share_card_made_by">Concluído por Mika</string>
+    <string name="share_card_made_by">Concluído por UNI</string>
     <string name="chat_quote">Citar</string>
     <string name="chat_select_text">Selecionar texto</string>
     <string name="chat_copied">Copiado</string>
@@ -264,7 +264,7 @@
     <string name="chat_retry_failed">%1$s: não foi possível copiar</string>
     <string name="chat_select_hint">Toque e segure o texto para selecioná-lo</string>
     <string name="chat_quote_remove">Remover citação</string>
-    <string name="chat_quoting_mika">Citando o Mika: %1$s</string>
+    <string name="chat_quoting_mika">Citando o UNI: %1$s</string>
     <string name="chat_quoting_you">Citando você: %1$s</string>
     <string name="chat_edit_message">Editar mensagem</string>
     <string name="chat_withdraw_message">Retirar mensagem</string>
@@ -331,11 +331,11 @@
     <string name="plus_sub_device">Explorar pastas neste telefone</string>
     <string name="plus_clipboard">Área de transferência</string>
     <string name="plus_sub_clipboard">Colar o que você acabou de copiar</string>
-    <string name="plus_sub_teach">Mostre uma vez e o Mika aprende</string>
+    <string name="plus_sub_teach">Mostre uma vez e o UNI aprende</string>
     <string name="plus_sub_skills">Usar uma habilidade neste turno</string>
     <string name="plus_sub_tasks">Preencher uma tarefa salva na entrada</string>
     <string name="plus_sub_browser">Navegador integrado</string>
-    <string name="plus_skills_empty">Ainda não há habilidades pessoais. As que o Mika aprender com tarefas concluídas aparecerão aqui.</string>
+    <string name="plus_skills_empty">Ainda não há habilidades pessoais. As que o UNI aprender com tarefas concluídas aparecerão aqui.</string>
     <string name="plus_clipboard_empty">Nada para colar da área de transferência</string>
     <string name="plus_skill_directive">Usar a habilidade “%1$s”: </string>
     <string name="plus_reuse">Salvos</string>
@@ -353,10 +353,10 @@
     <string name="chat_idea_screenshot">Encontre minha captura de tela mais recente</string>
     <string name="chat_idea_meeting">Adicione uma reunião amanhã às 15h</string>
     <!-- 空对话推广卡上的一句话说明;完整提示词点了才填进输入框 -->
-    <string name="chat_example_github_star_blurb">Apoie o projeto de código aberto Mika</string>
+    <string name="chat_example_github_star_blurb">Apoie o projeto de código aberto UNI</string>
     <string name="chat_example_follow_blurb">Siga o autor e entre no chat</string>
     <string name="chat_example_group_summary_blurb">Resuma as mensagens não lidas de hoje</string>
-    <string name="chat_example_share_title">Compartilhe o Mika com um amigo</string>
+    <string name="chat_example_share_title">Compartilhe o UNI com um amigo</string>
     <string name="chat_example_share_blurb">Indique para quem vai usar</string>
-    <string name="chat_example_share">Compartilhe o link do projeto Mika https://github.com/wangzan101/mika com um amigo e diga que ele opera o celular por você.</string>
+    <string name="chat_example_share">Compartilhe o link do projeto UNI https://github.com/wangzan101/mika com um amigo e diga que ele opera o celular por você.</string>
 </resources>

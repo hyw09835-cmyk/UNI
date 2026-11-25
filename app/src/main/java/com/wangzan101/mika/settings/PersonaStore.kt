@@ -23,7 +23,7 @@ data class Persona(
     val prompt: String,
     /** 界面上选的选项;旧文件里没有这一项时全是默认值。 */
     val style: PersonaStyle = PersonaStyle.DEFAULT,
-    /** 称呼:助理的自称;空着就是默认的 Mika。进提示词前由 [PersonaPrompt.nickname] 清洗。 */
+    /** 称呼:助理的自称;空着就是默认的 UNI。进提示词前由 [PersonaPrompt.nickname] 清洗。 */
     val nickname: String = "",
     /** 每次保存 +1;v1 只保留最新正文,旧修订不保留。 */
     val revision: Int = 1,

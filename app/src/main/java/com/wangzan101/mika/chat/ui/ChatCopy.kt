@@ -19,7 +19,7 @@ object ChatCopy {
     }
 
     val EMPTY_PROMPT get() = tr(R.string.chat_empty_prompt)
-    /** 空对话里的一句价值主张:说明 Mika 能干嘛。 */
+    /** 空对话里的一句价值主张:说明 UNI 能干嘛。 */
     val EMPTY_VALUE get() = tr(R.string.chat_empty_value)
 
     /** 内置示例的类型,决定卡片上用哪个 App 的图标。 */
@@ -31,7 +31,7 @@ object ChatCopy {
 
     /**
      * 空对话顶部的推广卡,写死在这里,每次按当前界面语言取,点了填进去的也是当前语言。
-     * 中文:GitHub star、小红书关注、微信群总结;其他语言:GitHub star、X 关注、把 Mika 分享给朋友。
+     * 中文:GitHub star、小红书关注、微信群总结;其他语言:GitHub star、X 关注、把 UNI 分享给朋友。
      * 用户自己加的任务不在这里,在输入框加号面板里。
      */
     val promos get() = listOf(
@@ -73,7 +73,7 @@ object ChatCopy {
     }
 
     /** 对话页顶栏的标题:固定是 App 名;副标题说此刻在做什么。 */
-    const val APP_TITLE = "Mika"
+    const val APP_TITLE = "UNI"
 
     /** 对话的名字:第一句话(只取第一行,附件那几行不算;只发了屏幕时是「你此刻的屏幕」);空对话为空。侧栏里用它称呼对话。 */
     fun title(exchanges: List<Exchange>): String =
