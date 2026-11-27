@@ -1,6 +1,6 @@
 # 人格（可命名的自定义指令）
 
-人格是一层可命名、可复用的自定义提示词：一组界面上选的选项，加一段自己写的指令。在设置里选用一套，对所有对话生效。它只改变 Mika 怎么说话（语气、长度、措辞、格式、进度说明的写法），不改变 Mika 能做什么。记忆回答「知道什么」，人格回答「怎么做事」。
+人格是一层可命名、可复用的自定义提示词：一组界面上选的选项，加一段自己写的指令。在设置里选用一套，对所有对话生效。它只改变 UNI 怎么说话（语气、长度、措辞、格式、进度说明的写法），不改变 UNI 能做什么。记忆回答「知道什么」，人格回答「怎么做事」。
 
 > 状态：v1（#292）已合入，发行版默认开启。能力收紧、导入/导出、模型组绑定按后续版本做，见文末。
 
@@ -38,13 +38,13 @@ capabilities/groups.md、channels.md、phone.md、web.md、sandbox.md …（按�
 
 ## 称呼
 
-人格可以带一个称呼（`Persona.nickname`）：助理的自称，默认 Mika。它会进围栏之外的固定文字，所以由 `PersonaPrompt.nickname` 严格清洗：只留各种文字的字母、数字、组合记号、空格、连字符和间隔号，连续空白并成一个，最多 16 个字，清洗后为空就是 Mika。界面上被清洗动过的称呼不让保存（`PersonaPrompt.nicknameAccepted`），不悄悄改。
+人格可以带一个称呼（`Persona.nickname`）：助理的自称，默认 UNI。它会进围栏之外的固定文字，所以由 `PersonaPrompt.nickname` 严格清洗：只留各种文字的字母、数字、组合记号、空格、连字符和间隔号，连续空白并成一个，最多 16 个字，清洗后为空就是 UNI。界面上被清洗动过的称呼不让保存（`PersonaPrompt.nicknameAccepted`），不悄悄改。
 
-- 称呼是 Mika 时，身份句和人格层和以前逐字节一样。
-- 不是 Mika 时：`system/identity.md` 首句用称呼（文件里是占位符）；后面紧跟 `persona/renamed.md` 一段，说明 Mika 是所在 App 的名字、后文和工具说明里的 Mika 指这个 App 和它自己、改名不改变它能做什么；人格层固定头里的「You are still …」也用称呼。
+- 称呼是 UNI 时，身份句和人格层和以前逐字节一样。
+- 不是 UNI 时：`system/identity.md` 首句用称呼（文件里是占位符）；后面紧跟 `persona/renamed.md` 一段，说明 UNI 是所在 App 的名字、后文和工具说明里的 UNI 指这个 App 和它自己、改名不改变它能做什么；人格层固定头里的「You are still …」也用称呼。
 - 只改称呼、别的全默认时没有人格层，但运行记录照样记这一轮用了哪一套。
-- 界面上的「Mika」（顶栏、回答卡片左上角、设置里的文案）不跟着称呼变：那是 App 的名字。
-- 工具说明、反馈文字和内部角色的提示词里的 Mika 不变；用新名字称呼它的消息在意图判断这些内部环节里是否同样顺利，没有测过。个人助手模式有自己的提示词，不带称呼。
+- 界面上的「UNI」（顶栏、回答卡片左上角、设置里的文案）不跟着称呼变：那是 App 的名字。
+- 工具说明、反馈文字和内部角色的提示词里的 UNI 不变；用新名字称呼它的消息在意图判断这些内部环节里是否同样顺利，没有测过。个人助手模式有自己的提示词，不带称呼。
 
 ## 固定头尾和转义
 
@@ -66,7 +66,7 @@ capabilities/groups.md、channels.md、phone.md、web.md、sandbox.md …（按�
 ## 存储
 
 - `files/settings/personas.json`：`{ "version": 1, "personas": [...], "active": "<id>" }`。`active` 是设置里选的在用的那一套，和列表同一次写盘；删掉在用的那一套时一并清掉，指向不存在的 id 当没有。带 `version`，原子写（临时文件 + 改名），读不懂时把原文件另存为 `personas.json.bad-<时间>` 并当空列表。不加密，不含密钥。
-- 字段：`id`、`name`、`description`、`prompt`、`style`（选项；旧文件没有时全默认，不认识的取值按默认读）、`nickname`（称呼，空着就是 Mika）、`revision`、`createdAt`、`updatedAt`、`builtin`（v1 不发内置示例，字段预留）。`revision` 在内容真的变了时 +1（点的是已经选着的那一档不写盘、不涨）；只保留最新内容。
+- 字段：`id`、`name`、`description`、`prompt`、`style`（选项；旧文件没有时全默认，不认识的取值按默认读）、`nickname`（称呼，空着就是 UNI）、`revision`、`createdAt`、`updatedAt`、`builtin`（v1 不发内置示例，字段预留）。`revision` 在内容真的变了时 +1（点的是已经选着的那一档不写盘、不涨）；只保留最新内容。
 - 对话旁文件 `<conversationId>.persona`（上游 v1 的按对话绑定）不再读写：`ConversationStore` 里的 `persona` / `setPersona` 和分支时的复制还在，但任务不看它，盘上已有的文件留着不动。
 
 ## 安全边界

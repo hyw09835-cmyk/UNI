@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause_title">Jeda UNI</string>
+    <string name="pause_row_sub_active">Hentikan semua pekerjaan UNI sampai Anda melanjutkannya</string>
+    <string name="pause_row_sub_paused">Dijeda: tidak ada tugas atau rencana yang berjalan</string>
+    <string name="pause_state_active">Aktif</string>
+    <string name="pause_explain">Menjeda akan menghentikan semua tugas yang berjalan dan mengantre, melewati rencana yang sudah waktunya, dan menolak tugas baru dari chat, komputer, dan saluran pesan sampai Anda melanjutkan. Layanan aksesibilitas UNI dan proses debug nirkabel juga dimatikan, dan pembantu ponsel dihentikan. Tidak ada yang dicopot atau dihapus, dan penyambungan proses debug nirkabel tetap tersimpan.</string>
+    <string name="pause_paused_title">UNI dijeda</string>
+    <string name="pause_paused_body">Sampai Anda melanjutkan, tidak ada tugas yang berjalan, rencana dilewati, dan pembantu ponsel berhenti.</string>
+    <string name="pause_active_title">UNI aktif</string>
+    <string name="pause_active_body">Jeda UNI saat Anda ingin mematikannya sepenuhnya untuk sementara.</string>
+    <string name="pause_status_label">Yang dimatikan saat dijeda</string>
+    <string name="pause_action">Jeda UNI</string>
+    <string name="pause_action_sub">Hentikan tugas, matikan aksesibilitas dan proses debug nirkabel, hentikan pembantu</string>
+    <string name="pause_resume">Lanjutkan UNI</string>
+    <string name="pause_resume_sub">Sambungkan ulang pembantu dengan penyambungan yang tersimpan</string>
+    <string name="pause_resumed">UNI aktif kembali.</string>
+    <string name="pause_resume_note">UNI tidak dapat mengaktifkan semuanya kembali sendiri. Selesaikan langkah di bawah.</string>
+    <string name="pause_a11y_restoring">Mengaktifkan kembali layanan aksesibilitas UNI…</string>
+    <string name="pause_a11y_label">Layanan aksesibilitas</string>
+    <string name="pause_wireless_label">Proses debug nirkabel</string>
+    <string name="pause_helper_label">Pembantu ponsel</string>
+    <string name="pause_helper_running">Berjalan</string>
+    <string name="pause_helper_paused">Dijeda</string>
+    <string name="pause_helper_not_running">Tidak berjalan</string>
+    <string name="pause_helper_connecting">Menyambungkan…</string>
+    <string name="pause_tasks_stopped">Tugas yang berjalan dan mengantre telah dihentikan.</string>
+    <string name="pause_done">Aksesibilitas dan proses debug nirkabel mati, pembantu dihentikan.</string>
+    <string name="pause_a11y_manual">Tidak dapat mematikan layanan aksesibilitas dari sini. Buka setelan Aksesibilitas dan matikan UNI.</string>
+    <string name="pause_wireless_manual">Tidak dapat mematikan proses debug nirkabel dari sini. Buka Opsi developer dan matikan.</string>
+    <string name="pause_save_failed">Perubahan tidak dapat disimpan, jadi tidak ada yang berubah. Coba lagi.</string>
+    <string name="pause_step_a11y">Nyalakan kembali UNI di setelan Aksesibilitas</string>
+    <string name="pause_step_wireless">Nyalakan kembali proses debug nirkabel di Opsi developer</string>
+    <string name="pause_step_repair">Sambungkan ulang pembantu ponsel</string>
+    <string name="pause_reconnect">Sambungkan ulang pembantu sekarang</string>
+    <string name="pause_blocked_task">UNI sedang dijeda, jadi tugas ini tidak dimulai. Lanjutkan UNI di Setelan terlebih dahulu.</string>
+    <string name="pause_blocked_plan">UNI sedang dijeda, jadi rencana ini tidak dijalankan.</string>
+    <string name="pause_blocked_workflow">UNI sedang dijeda, jadi alur kerja ini tidak dijalankan. Lanjutkan UNI di Setelan terlebih dahulu.</string>
+    <string name="pause_channel_reply">UNI di ponsel sedang dijeda, jadi tugas ini tidak dimulai. Kirim lagi setelah UNI dilanjutkan.</string>
+    <string name="plans_skipped_paused">Dilewati saat UNI dijeda</string>
+    <string name="workflow_stopped_paused">Dihentikan karena UNI dijeda</string>
+</resources>

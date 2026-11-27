@@ -4,7 +4,7 @@
 
 模型在沙箱 `/workspace` 里产出文件（图表、报表、音频、截图等），但现在：
 
-- 聊天里没法直接给用户看/点——只能 `share_file` 拷到「下载/Mika」，用户得去文件夹里找；
+- 聊天里没法直接给用户看/点——只能 `share_file` 拷到「下载/UNI」，用户得去文件夹里找；
 - 后续轮次要再引用它，只能自己记 `/workspace/...` 路径，凭记忆、不稳。
 
 而「用户带的附件」早就有这套待遇（`附件:/workspace/inbox/...` 行 + 聊天页 `AttachmentMessage` 卡片）。缺口是「模型产出」这半没有。
@@ -23,7 +23,7 @@
 
 - `/workspace` 按「对话 ID」切（`TaskTools` 里 `workspace: () -> String`，注释「本次任务的工作区(对话 ID)」，默认 `"default"`）。
 - 输入附件走 `AttachmentLines`（`附件:/workspace/...` 文本行）+ 聊天页 `AttachmentMessage` 渲染。
-- `share_file` 把文件拷到宿主「下载/Mika」，返回 `savedAs`（一个名字，不是可渲染引用）。
+- `share_file` 把文件拷到宿主「下载/UNI」，返回 `savedAs`（一个名字，不是可渲染引用）。
 - 助手回复是 Markdown（`MarkdownText` 渲染），但渲染器不认 `/workspace/...` 的图片/链接。
 
 ## 方案

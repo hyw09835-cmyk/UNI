@@ -1,6 +1,6 @@
 # 任务通知合格但没有显示实时胶囊
 
-在一台 Android 16 真机（一加 13T，ColorOS 17）上，Mika Dev 已获准发普通通知，但系统「实时通知」开关仍是关闭的（该厂商把 Android 16 的实时通知显示为「流体云」）。运行 `TaskLiveUpdateDeviceTest`：开关关闭时，任务通知的 `hasPromotableCharacteristics()` 为真，但 `NotificationManager.canPostPromotedNotifications()` 为假，桌面只出现普通图标。用 `Settings.ACTION_APP_NOTIFICATION_PROMOTION_SETTINGS` 和 `Settings.EXTRA_APP_PACKAGE` 打开本应用的系统页，启用后重跑同一用例，桌面顶部出现「正在执行」，随后原位变成「等你回答」。
+在一台 Android 16 真机（一加 13T，ColorOS 17）上，UNI Dev 已获准发普通通知，但系统「实时通知」开关仍是关闭的（该厂商把 Android 16 的实时通知显示为「流体云」）。运行 `TaskLiveUpdateDeviceTest`：开关关闭时，任务通知的 `hasPromotableCharacteristics()` 为真，但 `NotificationManager.canPostPromotedNotifications()` 为假，桌面只出现普通图标。用 `Settings.ACTION_APP_NOTIFICATION_PROMOTION_SETTINGS` 和 `Settings.EXTRA_APP_PACKAGE` 打开本应用的系统页，启用后重跑同一用例，桌面顶部出现「正在执行」，随后原位变成「等你回答」。
 
 诊断时分开看三件事：应用发出的通知是否符合[实时更新条件](https://developer.android.com/develop/ui/views/notifications/live-update)、系统是否允许这个应用提升通知、退出应用后系统界面是否真的显示。只看通知栏、权限声明或某一个系统标志，均不能代替最后一步。
 

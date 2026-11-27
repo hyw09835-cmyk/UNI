@@ -2,13 +2,13 @@
 
 [简体中文](cli.md) | English
 
-> Using Mika from a computer? Start with [Use Mika from a computer](computer.en.md): how to choose between CLI + Skill and MCP, and how to connect.
+> Using UNI from a computer? Start with [Use UNI from a computer](computer.en.md): how to choose between CLI + Skill and MCP, and how to connect.
 
-CLI and MCP are peer entry points backed by the same remote task service on the phone. The CLI calls an ordinary HTTP task API; it needs no MCP SDK, handshake, tool discovery or MCP client configuration. The Skill tells a computer agent how to delegate, handle questions and report actual results. Mika on Android still plans and executes the task.
+CLI and MCP are peer entry points backed by the same remote task service on the phone. The CLI calls an ordinary HTTP task API; it needs no MCP SDK, handshake, tool discovery or MCP client configuration. The Skill tells a computer agent how to delegate, handle questions and report actual results. UNI on Android still plans and executes the task.
 
 ```mermaid
 flowchart LR
-    Skill["Computer agent + Skill"] --> CLI["Mika CLI"]
+    Skill["Computer agent + Skill"] --> CLI["UNI CLI"]
     Shell["User / shell script"] --> CLI
     Client["MCP client"] --> MCP
     subgraph Phone["Android phone · shared listener and authentication"]
@@ -32,7 +32,7 @@ With only the Skill installed, `mika` below means `python3 <skills-directory>/mi
 
 ## Connect
 
-ADB mode requires Android platform-tools and either USB or connected wireless ADB. For wireless ADB, this computer must be paired and connected to the phone, which must appear as `device` in `adb devices`. Pairing Mika's built-in helper on the phone does not pair the computer; both also differ from direct LAN access below.
+ADB mode requires Android platform-tools and either USB or connected wireless ADB. For wireless ADB, this computer must be paired and connected to the phone, which must appear as `device` in `adb devices`. Pairing UNI's built-in helper on the phone does not pair the computer; both also differ from direct LAN access below.
 
 ```bash
 mika devices --json
@@ -40,13 +40,22 @@ mika connect --device SERIAL --json
 mika doctor --device SERIAL --json
 ```
 
-You may omit `--device` when exactly one device is online; the existing ANDROID_SERIAL environment variable is also supported. Multiple devices require a choice, and connection failure never selects a different phone. `connect` runs Mika's official bootstrap script to enable computer access and start the required helper; it does not submit a task. Other commands only read the current connection.
+You may omit `--device` when exactly one device is online; the existing ANDROID_SERIAL environment variable is also supported. Multiple devices require a choice, and connection failure never selects a different phone. `connect` runs UNI's official bootstrap script to enable computer access and start the required helper; it does not submit a task. Other commands only read the current connection.
 
 Each invocation reads the current token, port and boot number, allocates its own temporary `adb forward tcp:0` mapping, then removes only that mapping. Tokens stay in process memory; bootstrap output is captured instead of printed. Exiting the CLI leaves the phone service and ongoing tasks running.
 
-If a debug build is installed alongside Mika, connect with `mika connect --package com.wangzan101.mika.dev`. Use the same package for subsequent `doctor`, `task` and `ui` commands. Omitting `--package` selects `com.wangzan101.mika`. Set different listening ports if both builds have computer access enabled. `--package` selects an ADB target and cannot be used with `--url`.
+If a debug build is installed alongside UNI, connect with `mika connect --package com.wangzan101.mika.dev`. Use the same package for subsequent `doctor`, `task` and `ui` commands. Omitting `--package` selects `com.wangzan101.mika`. Set different listening ports if both builds have computer access enabled. `--package` selects an ADB target and cannot be used with `--url`.
 
 The CLI handles forwarding; you do not need the MCP instructions for manually forwarding a fixed port. After reconnecting the cable, make sure the same phone is back in ADB. After a phone reboot or turning off computer access, run `connect` again.
+
+If another program on the computer holds the default ADB server port (usually 5037) and conflicts with the ADB UNI uses, give UNI its own server port:
+
+```bash
+mika --adb-server-port 5038 devices --json
+mika --adb-server-port 5038 connect --device SERIAL --json
+```
+
+Pass the same option to later `doctor`, `task`, `ui` and `notification-doctor` commands. This is the port of the computer's ADB server, unrelated to UNI's listening port on the phone, and it cannot be combined with `--url`. Without it, adb's own choice applies (including the `ANDROID_ADB_SERVER_PORT` environment variable). Wireless ADB devices must be connected again on the new server with `adb -P 5038 connect`. Some phones restart `adbd` when USB is replugged, which ends a helper started over USB; once wireless debugging is paired in UNI, the phone restarts its helper by itself.
 
 For LAN/private-network access explicitly enabled in the phone's settings:
 
@@ -55,6 +64,18 @@ mika --url http://PHONE:8765 --token-file /path/to/private-token-file doctor --j
 ```
 
 The private token file contains only the access token. Use the server origin or `/api/v1` URL, not `/mcp`; URL credentials are rejected. The CLI refuses redirects and ignores ambient HTTP proxies. The server retains its private-network restrictions. Plain LAN HTTP does not encrypt traffic; ADB or a trusted private network can be used.
+
+## Read-only screen inspection over ADB
+
+```bash
+mika screen --device SERIAL --json
+# A debug build installed alongside
+mika screen --device SERIAL --package com.wangzan101.mika.dev --json
+```
+
+`screen` uses the authorized ADB connection to run a screen-reading entry point from the UNI APK as the shell user. It returns the accessible window and element trees of every display, including UNI's virtual display, and each window carries its `display_id`. It connects through Android's public `UiAutomation` capability with `FLAG_DONT_SUPPRESS_ACCESSIBILITY_SERVICES`, so UNI's accessibility service keeps running during inspection. The stock `adb shell uiautomator dump` uses a suppressing connection that temporarily disconnects UNI, so do not use it instead. If the system cannot provide a non-suppressing connection, the command fails rather than falling back to a suppressing one.
+
+Inspection is read-only: it does not tap, type or change settings, and it does not need the phone's task service. Password fields (and their children) report no text or description, only `password: true`. One inspection reads at most 2,500 elements, 60 levels deep, 1,000 characters per text and about one million characters in total, reading focused and active windows first. Beyond that `truncated` is true and `truncated_by` names the limit (`nodes`, `depth`, `text`, `output`), so check `node_count` and `truncated` before relying on the result. If another UI automation session holds the phone, the result is `screen_unavailable` with `reason` `connect_failed`; if the phone cannot finish within 15 seconds, the reason is `timeout`. An older UNI without this entry point returns `reason` `outdated_app` and asks for an update; an ADB failure is `adb_failed` and output that is not a screen result is `unreadable`. Raw phone output is never treated as a result. The command is not available over LAN-only access (`--url`).
 
 ## Tasks
 
@@ -114,7 +135,7 @@ mika ui                      # open the task desk in a local browser
 mika ui --device SERIAL --no-open
 ```
 
-`mika ui` serves a page for this computer only on a random `127.0.0.1` port. It uses the same task commands to start tasks, follow progress, answer questions, add instructions and cancel, and shows Simplified Chinese or English depending on the browser's language. The part of the link after `#` is the session secret for this run; browsers do not send it anywhere. The server also checks Host and Origin and accepts only a fixed set of actions. It is an interactive page for people and does not support `--json`. See [Use Mika from a computer](computer.en.md#task-desk-mika-ui).
+`mika ui` serves a page for this computer only on a random `127.0.0.1` port. It uses the same task commands to start tasks, follow progress, answer questions, add instructions and cancel, and shows Simplified Chinese or English depending on the browser's language. The part of the link after `#` is the session secret for this run; browsers do not send it anywhere. The server also checks Host and Origin and accepts only a fixed set of actions. It is an interactive page for people and does not support `--json`. See [Use UNI from a computer](computer.en.md#task-desk-mika-ui).
 
 ## HTTP contract
 
