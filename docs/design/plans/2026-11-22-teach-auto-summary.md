@@ -1,8 +1,8 @@
-# 教 Mika 自动总结 Implementation Plan
+# 教 UNI 自动总结 Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 示范结束即自动把轨迹整理成技能:桌面/图标/地址栏这类人工机械步骤折叠成 Mika 的直达做法,总结页直接展示成品技能供用户收下。
+**Goal:** 示范结束即自动把轨迹整理成技能:桌面/图标/地址栏这类人工机械步骤折叠成 UNI 的直达做法,总结页直接展示成品技能供用户收下。
 
 **Architecture:** core 里新增确定性的 `TeachRoute.fold`(只折叠启动器步骤,识别失败 fail-open),提示词与 `TeachDraft` 接收折叠后的路线并指示模型把浏览器/搜索机械动作改写成直达;app 层 `TeachApps` 用系统意图识别桌面与默认浏览器,`TeachRuntime.end()` 自动触发整理,`TeachScreen` 改为无状态页面组(介绍/示范中/整理中/总结/已学会),总结正文复用 `SkillReadingView`。
 
@@ -40,7 +40,7 @@
 
 - [x] **Step 1: 做五态原型**
 
-单页 HTML,复用现有 Mika 视觉 token(浅色/深色各一版,手机宽度):介绍、示范中、整理中、总结(含折叠提示与五节正文)、已学会。可点击在状态间切换。
+单页 HTML,复用现有 UNI 视觉 token(浅色/深色各一版,手机宽度):介绍、示范中、整理中、总结(含折叠提示与五节正文)、已学会。可点击在状态间切换。
 
 - [x] **Step 2: 给用户看并等确认**
 
@@ -144,7 +144,7 @@ git commit -m "feat(teach): fold launcher steps into direct app launches"
 }
 
 @Test fun requestCarriesTheFoldedHumanSteps() {
-    assertTrue(TeachDraft.request(session(), route()).contains("已按 Mika 的直达能力省掉"))
+    assertTrue(TeachDraft.request(session(), route()).contains("已按 UNI 的直达能力省掉"))
 }
 
 @Test fun localAssemblyNeverMentionsTheDesktop() {
@@ -168,8 +168,8 @@ Expected: FAIL(编译错:签名不匹配)。
 
 - [ ] **Step 3: 改 `request` 与 `assemble`**
 
-- `request`:输出「目标」「App: <label>(<pkg>)<浏览器? 是>」「已按 Mika 的直达能力省掉:<folded>」和路线步骤(合成步用其 text);删除对原始 launcher 步骤的输出;保留「输入的文字没有保存」。
-- `assemble`:入口小节改为「Mika 直接启动 <首个 app>」;步骤用 `route.steps`;成功判据仍取最后一个保留步骤的包名/窗口;caveats 原样保留;首尾不再出现「桌面/图标」。
+- `request`:输出「目标」「App: <label>(<pkg>)<浏览器? 是>」「已按 UNI 的直达能力省掉:<folded>」和路线步骤(合成步用其 text);删除对原始 launcher 步骤的输出;保留「输入的文字没有保存」。
+- `assemble`:入口小节改为「UNI 直接启动 <首个 app>」;步骤用 `route.steps`;成功判据仍取最后一个保留步骤的包名/窗口;caveats 原样保留;首尾不再出现「桌面/图标」。
 - `draft`:多一个 `route` 参数并传给二者。
 
 - [ ] **Step 4: 重写提示词 `teach_skill.md` 的规则段**
@@ -300,7 +300,7 @@ Expected: FAIL(TeachSummaryPage 未定义)。
 - `teach_intro_body`「你先完整做一遍,我在旁边看。做完自动整理成技能,下次直接用。」
 - `teach_disclosure_short`「只看这台手机上的操作;密码、验证码、支付内容不记录。详细说明」
 - `teach_summarizing`「正在整理成技能…」
-- `teach_summary_head`「按 Mika 自己的做法整理,不是把你的操作重放一遍。」
+- `teach_summary_head`「按 UNI 自己的做法整理,不是把你的操作重放一遍。」
 - `teach_folded_n`「已自动省掉 %1$d 个只用手的步骤」
 - `teach_basic_note`「这次没接模型,按本机规则整理。配好模型后能理解得更细。」
 - `teach_accept`「收下这个技能」
@@ -349,7 +349,7 @@ git commit -m "feat(teach): show an auto-written skill instead of raw steps"
 
 - [x] **Step 1: 安装并跑真机示范**
 
-`./gradlew :app:installDebug`;在 A94VUT2C28001694 上从教 Mika 开始,示范「打开小红书 → 搜索装修 → 打开第一条 → 收藏 → 做完了」。截图确认:总结第一步为「启动 小红书」,不含「桌面/图标」;折叠提示数量合理;正文五节齐全。
+`./gradlew :app:installDebug`;在 A94VUT2C28001694 上从教 UNI 开始,示范「打开小红书 → 搜索装修 → 打开第一条 → 收藏 → 做完了」。截图确认:总结第一步为「启动 小红书」,不含「桌面/图标」;折叠提示数量合理;正文五节齐全。
 
 - [x] **Step 2: 收下与可用性**
 
@@ -364,7 +364,7 @@ git commit -m "feat(teach): show an auto-written skill instead of raw steps"
 - [x] **Step 4: 失败与恢复**
 
 - 0 步:开始后立刻结束 → 显示「没看到操作」,可重来。
-- 整理中被杀:整理中按返回/强杀 Mika,重进教 Mika → 自动继续整理或显示重试,轨迹不丢。
+- 整理中被杀:整理中按返回/强杀 UNI,重进教 UNI → 自动继续整理或显示重试,轨迹不丢。
 - 无模型:临时切到一个未配置模型的资料?若成本高,直接用 Task 3 的本机整理单测 + 代码审阅代替,并在真机只看有模型路径。
 
 - [x] **Step 5: 回归**

@@ -1,5 +1,6 @@
 package com.wangzan101.mika.voice.ui
 
+import com.wangzan101.mika.voice.ondevice.OnDeviceCatalog
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -143,13 +144,15 @@ internal fun VoiceCatalogContent(viewModel: VoiceCatalogViewModel, onBack: () ->
             modifier = Modifier.fillMaxWidth().testTag("voice-catalog-add"),
         )
 
+        // 本机语音包由「离线语音包」页管(下载、删除),不在这里当普通服务编辑
+        val services = snapshot.services.filter { it.id != OnDeviceCatalog.SERVICE_ID }
         val groups = snapshot.models.groupBy { it.serviceId }
-        if (snapshot.services.isEmpty() && snapshot.models.isEmpty()) {
+        if (services.isEmpty() && snapshot.models.none { it.serviceId != OnDeviceCatalog.SERVICE_ID }) {
             Spacer(Modifier.height(20.dp))
             FooterNote(stringResource(R.string.voice_catalog_empty), Modifier.testTag("voice-catalog-empty"))
         }
 
-        snapshot.services.forEach { service ->
+        services.forEach { service ->
             val models = groups[service.id].orEmpty()
             ServiceGroup(
                 service = service,
@@ -513,7 +516,8 @@ private fun VoiceCatalogSheet(
             if (form.sttOn) {
                 ProtocolBlock(
                     stringResource(R.string.voice_catalog_stt_protocol),
-                    SttProtocol.entries.map { it to sttProtocolLabel(it) },
+                    // 本机离线识别只由「离线语音包」页登记,不能手填成自建服务的协议
+                    SttProtocol.entries.filter { it != SttProtocol.OnDevice }.map { it to sttProtocolLabel(it) },
                     form.sttProtocol.name,
                     { name -> form.sttProtocol = SttProtocol.valueOf(name) },
                     "voice-catalog-stt-protocol",
